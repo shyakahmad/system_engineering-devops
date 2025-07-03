@@ -1,2 +1,4 @@
 #!/bin/bash
-find . -type d -exec chmod a+x {} \
+for dir in *; do
+  [ -d "$dir" ] && chmod a+x "$dir"
+done
