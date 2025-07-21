@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# A script that displays running processes with exact formatting
-
-ps -eo user,stime,cmd
+echo "USER"
+ps -eo user --no-headers | sort | uniq
