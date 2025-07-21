@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
 # This script displays the username(s) of running processes
+
 echo "USER"
 ps -eo user --no-headers | sort | uniq
