@@ -1,3 +1,3 @@
 #!/usr/bin/env bash
 # Displays the PID and full path of bash processes
-pgrep -af bash | awk '$2 ~ /bash$/ {print $1, $2}'
+pgrep -a bash | grep -Eo '^[0-9]+ /bin/bash'
