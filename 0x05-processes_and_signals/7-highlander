@@ -1,4 +1,10 @@
 #!/usr/bin/env bash
-# Stops the 7-highlander process by sending it SIGTERM via pkill
+# Prints "To infinity and beyond" forever; on SIGTERM prints "I am invincible!!!"
 
-pkill -f 7-highlander
+# trap SIGTERM and print our message
+trap 'echo "I am invincible!!!"' SIGTERM
+
+while true; do
+  echo "To infinity and beyond"
+  sleep 2
+done
