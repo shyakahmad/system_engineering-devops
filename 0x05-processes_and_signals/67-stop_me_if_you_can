@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Sends SIGTERM to the 7-highlander process
+# Stops the 7-highlander process by sending it SIGTERM via pkill
 
 pkill -f 7-highlander
