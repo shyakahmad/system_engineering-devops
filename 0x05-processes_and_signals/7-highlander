@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 # Prints "To infinity and beyond" forever; on SIGTERM prints "I am invincible!!!"
 
-# trap SIGTERM and print our message
-trap 'echo "I am invincible!!!"' SIGTERM
+# trap SIGTERM and print our message to stderr (unbuffered)
+trap 'printf "I am invincible!!!\n" >&2' SIGTERM
 
 while true; do
   echo "To infinity and beyond"
