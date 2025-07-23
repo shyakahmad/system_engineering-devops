@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
-# Prints "To infinity and beyond" forever; on SIGTERM prints "I am invincible!!!"
+# Prints "To infinity and beyond" forever, but echoes "I am invincible!!!" on SIGTERM
 
-# trap SIGTERM and print our message to stderr (unbuffered)
-trap 'printf "I am invincible!!!\n" >&2' SIGTERM
+trap 'echo "I am invincible!!!"' SIGTERM
 
-while true; do
+while true
+do
   echo "To infinity and beyond"
   sleep 2
 done
